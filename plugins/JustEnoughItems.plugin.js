@@ -2,12 +2,12 @@
 	* @name JEI
 	* @author LY
 	* @authorId 1018961806393360454
-	* @version 1.0.1
+	* @version 1.1.0
 	* @invite 5XDDB2Gxn8
 	* @description Tell users to use JEI, NEI, REI, HEI, TMI or any other recipe mods.
 	* @website https://github.com/LYzyx/
-	* @source https://github.com/LYzyx/BetterDiscordPlugins/blob/main/JustEnoughItems.plugin.js
-	* @updateUrl https://raw.githubusercontent.com/LYzyx/BetterDiscordPlugins/main/JustEnoughItems.plugin.js
+	* @source https://github.com/LYzyx/BetterDiscordPlugins/blob/main/plugins/JustEnoughItems.plugin.js
+	* @updateUrl https://raw.githubusercontent.com/LYzyx/BetterDiscordPlugins/main/plugins/JustEnoughItems.plugin.js
 */
 
 module.exports = (() => {

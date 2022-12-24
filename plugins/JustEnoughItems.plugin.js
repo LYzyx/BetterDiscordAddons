@@ -1,7 +1,7 @@
 /**
 	* @name JEI
 	* @description Tell users to use JEI, NEI, REI, HEI, TMI, HMI or any other recipe mods.
-	* @version 1.1.0
+	* @version 1.2.0
 	* @author LY
 	* @authorId 1018961806393360454
 	* @website https://github.com/LYzyx/

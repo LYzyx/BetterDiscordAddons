@@ -23,31 +23,70 @@
 }
 
 
-:root {
-	--background-primary: rgb(0, 0, 0, 0.05);
-	--background-secondary: rgb(0, 0, 0, 0.05);
-	--background-secondary-alt: rgb(0, 0, 0, 0.05);
-	--background-tertiary: rgb(0, 0, 0, 0.05);
-	--background-floating: rgb(0, 0, 0, 0.05);
-	--background-accent: rgb(0, 0, 0, 0.05);
+#app-mount .container-3wLKDe {
+	background: transparent;
+}
+
+#app-mount .chat-2ZfjoI {
+	background: transparent;
+}
+#app-mount .background-fkKrXt {
+	background: transparent;
+}
+
+#app-mount .header-3xB4vB {
+	background: transparent;
+}
+#app-mount .content-1jQy2l {
+	background: transparent;
+}
+
+/* User Profile */
+#app-mount .root-2uUafN {
+	background: transparent;
+}
+
+
+:root,
+.theme-dark,
+.theme-light {
 	
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-secondary-alt: transparent; 
+    --background-tertiary: transparent;
+    --background-accent: transparent;
+    --background-floating: transparent;
+	
+    --channeltextarea-background: transparent;
+	
+    --searcharea-background: transparent;
+	
+    --input-background: transparent;
+	
+    --channels-default: white;
+	
+    --text-normal: #dcddde;
+    --text-muted: #969696;
+	
+    --scroller-thumb: transparent;
+    --scroller-track: transparent;
+	
+    --background-modifier-rgb: transparent;
+    --background-modifier-hover: transparent;
+    --background-modifier-active: transparent;
+    --background-modifier-selected: transparent;
+    --background-modifier-accent: transparent;
+	
+    --interactive-normal: #3E82E5;
+    --interactive-hover: #443AFF;
+    --interactive-active: #C666FF;
+    --interactive-muted: gray;
+
 	/*
 		Change this url to whatever image you'd rather use.
 		Default is just a transparent background.
 		Alternatively, remove it for even more transparency!
 	*/
 	--background-image: url('https://raw.githubusercontent.com/LYzyx/BetterDiscordAddons/main/themes/Glass/background.png');
-}
-
-
-/*---------------- Dark Mode ----------------*/
-
-.theme-dark {
-  --background-primary: transparent;
-}
-
-/*---------------- Light Mode ----------------*/
-
-.theme-light {
-  --background-primary: transparent;
 }

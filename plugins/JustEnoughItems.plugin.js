@@ -24,7 +24,7 @@ module.exports = (() => {
                 version: "1.0",
                 description: "Tell users to use JEI, NEI, REI, HEI, TMI, HMI or any other recipe mods.",
             },
-            main: "JEI.plugin.js",
+            main: "JustEnoughItems.plugin.js",
         };
 
         return !global.ZeresPluginLibrary ?

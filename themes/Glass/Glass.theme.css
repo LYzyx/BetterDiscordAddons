@@ -1,0 +1,53 @@
+/**
+	* @name Glass
+	* @description Transparency for the Discord client.
+	* @version 1.0.0
+	* @author LY
+	* @authorId 1018961806393360454
+	* @website https://github.com/LYzyx/
+	* @invite 5XDDB2Gxn8
+	* @donate null
+	* @source https://github.com/LYzyx/BetterDiscordAddons/blob/main/themes/Glass/Glass.theme.css
+	* @updateUrl https://raw.githubusercontent.com/LYzyx/BetterDiscordAddons/main/themes/Glass/Glass.theme.css
+*/
+
+
+#app-mount .bg-1QIAus {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: var(--background-image);
+	background-position: var(--background-image-position, center);
+	background-size: var(--background-image-size, cover);
+}
+
+
+:root {
+	--background-primary: rgb(0, 0, 0, 0.05);
+	--background-secondary: rgb(0, 0, 0, 0.05);
+	--background-secondary-alt: rgb(0, 0, 0, 0.05);
+	--background-tertiary: rgb(0, 0, 0, 0.05);
+	--background-floating: rgb(0, 0, 0, 0.05);
+	--background-accent: rgb(0, 0, 0, 0.05);
+	
+	/*
+		Change this url to whatever image you'd rather use.
+		Default is just a transparent background.
+		Alternatively, remove it for even more transparency!
+	*/
+	--background-image: url('https://raw.githubusercontent.com/LYzyx/BetterDiscordAddons/main/themes/Glass/background.png');
+}
+
+
+/*---------------- Dark Mode ----------------*/
+
+.theme-dark {
+  --background-primary: transparent;
+}
+
+/*---------------- Light Mode ----------------*/
+
+.theme-light {
+  --background-primary: transparent;
+}

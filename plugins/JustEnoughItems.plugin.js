@@ -500,9 +500,9 @@ module.exports = (() => {
                             new Switch(
                                 "How Many Items",
                                 "Enable the /hmi Command",
-                                this.tmi,
+                                this.hmi,
                                 (e) => {
-                                    this.tmi = e;
+                                    this.hmi = e;
                                 }
                             )
                         );

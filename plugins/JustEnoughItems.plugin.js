@@ -1,6 +1,6 @@
 /**
 	* @name JEI
-	* @description Tell users to use JEI, NEI, REI, HEI, TMI or any other recipe mods.
+	* @description Tell users to use JEI, NEI, REI, HEI, TMI, HMI or any other recipe mods.
 	* @version 1.1.0
 	* @author LY
 	* @authorId 1018961806393360454
@@ -22,7 +22,7 @@ module.exports = (() => {
 				github_username: "LY",
 			}],
 			version: "1.0",
-			description: "Tell users to use JEI, NEI, REI, HEI, TMI or any other recipe mods.",
+			description: "Tell users to use JEI, NEI, REI, HEI, TMI, HMI or any other recipe mods.",
 		},
 		main: "JEI.plugin.js",
 	};
@@ -134,6 +134,11 @@ module.exports = (() => {
 						"tmi",
 						true
 					);
+					this.hmi = Utilities.loadData(
+						config.info.name,
+						"hmi",
+						true
+					);
 				}
 				checkForUpdates() {
 					try {
@@ -154,6 +159,7 @@ module.exports = (() => {
 					if (this.nei) this.addNEI();
 					if (this.oldnei) this.addOLDNEI();
 					if (this.tmi) this.addTMI();
+					if (this.hmi) this.addHMI();
 				}
 
 				/* -------------------------------------------------------------------------------- */
@@ -167,8 +173,8 @@ module.exports = (() => {
 							applicationId: "-1",
 							name: "jei",
 							displayName: "jei",
-							description: "Sends JEI CurseForge project page.",
-							displayDescription: "Sends JEI CurseForge project page.",
+							description: "Sends the 'Just Enough Items' CurseForge project page url.",
+							displayDescription: "Sends the 'Just Enough' Items CurseForge project page url.",
 							id: (-1 - res.length).toString(),
 							type: 1,
 							target: 1,
@@ -206,8 +212,8 @@ module.exports = (() => {
 							applicationId: "-1",
 							name: "hei",
 							displayName: "hei",
-							description: "Sends HEI CurseForge project page.",
-							displayDescription: "Sends HEI CurseForge project page.",
+							description: "Sends the 'Had Enough Items' CurseForge project page url.",
+							displayDescription: "Sends the 'Had Enough Items' CurseForge project page url.",
 							id: (-1 - res.length).toString(),
 							type: 1,
 							target: 1,
@@ -245,8 +251,8 @@ module.exports = (() => {
 							applicationId: "-1",
 							name: "rei",
 							displayName: "rei",
-							description: "Sends REI CurseForge project page.",
-							displayDescription: "Sends REI CurseForge project page.",
+							description: "Sends the 'Roughly Enough Items' CurseForge project page url.",
+							displayDescription: "Sends the 'Roughly Enough Items' CurseForge project page url.",
 							id: (-1 - res.length).toString(),
 							type: 1,
 							target: 1,
@@ -284,8 +290,8 @@ module.exports = (() => {
 							applicationId: "-1",
 							name: "nei",
 							displayName: "nei",
-							description: "Sends NEI (GT:NH Fork) CurseForge project page.",
-							displayDescription: "Sends NEI (GT:NH Fork) CurseForge project page.",
+							description: "Sends the 'Not Enough Items' (GT:NH Fork) CurseForge project page url.",
+							displayDescription: "Sends the 'Not Enough Items' (GT:NH Fork) CurseForge project page url.",
 							id: (-1 - res.length).toString(),
 							type: 1,
 							target: 1,
@@ -323,8 +329,8 @@ module.exports = (() => {
 							applicationId: "-1",
 							name: "oldnei",
 							displayName: "oldnei",
-							description: "Sends NEI (Original) CurseForge project page.",
-							displayDescription: "Sends NEI (Original) CurseForge project page.",
+							description: "Sends the 'Not Enough Items' (Original) CurseForge project page url.",
+							displayDescription: "Sends the 'Not Enough Items' (Original) CurseForge project page url.",
 							id: (-1 - res.length).toString(),
 							type: 1,
 							target: 1,
@@ -362,8 +368,8 @@ module.exports = (() => {
 							applicationId: "-1",
 							name: "tmi",
 							displayName: "tmi",
-							description: "Sends TMI CurseForge project page.",
-							displayDescription: "Sends TMI CurseForge project page.",
+							description: "Sends the 'Too Many Items' CurseForge project page url.",
+							displayDescription: "Sends the 'Too Many Items' CurseForge project page url.",
 							id: (-1 - res.length).toString(),
 							type: 1,
 							target: 1,
@@ -374,6 +380,46 @@ module.exports = (() => {
 										channel.id,
 										{
 											content: "Use TMI: https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1272385-toomanyitems-the-inventory-editor-and-more-1-8",
+											tts: false,
+											bottom: true,
+											invalidEmojis: [],
+											validNonShortcutEmojis: [],
+										},
+										undefined,
+										{}
+									)
+								} catch (err) {
+									Logger.err(err);
+								}
+							}
+						});
+					})
+				}
+
+
+				/* -------------------------------------------------------------------------------- */
+
+				/* Tell users to use How Many Items */
+
+				addHMI() {
+					Patcher.after(SlashCommandStore, "Kh", (_, args, res) => {
+						if (args[0] !== 1) return;
+						res.push({
+							applicationId: "-1",
+							name: "hmi",
+							displayName: "hmi",
+							description: "Sends the 'How Many Items' GitHub releases page url.",
+							displayDescription: "Sends the 'How Many Items' GitHub releases page url.",
+							id: (-1 - res.length).toString(),
+							type: 1,
+							target: 1,
+							predicate: () => true,
+							execute: async ([send], { channel }) => {
+								try {
+									MessageActions.sendMessage(
+										channel.id,
+										{
+											content: "Use HMI: https://github.com/rekadoodle/HowManyItems/releases",
 											tts: false,
 											bottom: true,
 											invalidEmojis: [],
@@ -440,6 +486,14 @@ module.exports = (() => {
 						new Switch(
 							"Too Many Items",
 							"Enable the /tmi Command",
+							this.tmi,
+							(e) => {
+								this.tmi = e;
+							}
+						),
+						new Switch(
+							"How Many Items",
+							"Enable the /hmi Command",
 							this.tmi,
 							(e) => {
 								this.tmi = e;

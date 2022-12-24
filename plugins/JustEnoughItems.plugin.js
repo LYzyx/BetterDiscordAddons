@@ -14,17 +14,7 @@
 
 module.exports = (() => {
         const config = {
-            info: {
-                name: "JustEnoughItems",
-                authors: [{
-                    name: "LY",
-                    discord_id: "1018961806393360454",
-                    github_username: "LY",
-                }],
-                version: "1.0",
-                description: "Tell users to use JEI, NEI, REI, HEI, TMI, HMI or any other recipe mods.",
-            },
-            main: "JEI.plugin.js",
+            main: "JustEnoughItems.plugin.js",
         };
 
         return !global.ZeresPluginLibrary ?

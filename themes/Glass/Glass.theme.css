@@ -65,6 +65,13 @@
 #app-mount .navRow-dG-XX8 {
 	background: transparent;
 }
+#app-mount .directoryModal-YJsOMv {
+	background: transparent;
+}
+
+#app-mount . {
+	background: transparent;
+}
 
 
 :root,
@@ -85,10 +92,10 @@
     --input-background: transparent;
 	
     --channels-default: white;
-	
+	/*
     --text-normal: #dcddde;
     --text-muted: #969696;
-	
+	*/
     --scroller-thumb: transparent;
     --scroller-track: transparent;
 	
@@ -97,12 +104,12 @@
     --background-modifier-active: transparent;
     --background-modifier-selected: transparent;
     --background-modifier-accent: transparent;
-	
+	/*
     --interactive-normal: #3E82E5;
     --interactive-hover: #443AFF;
     --interactive-active: #C666FF;
     --interactive-muted: gray;
-
+	*/
 	/*
 		Change this url to whatever image you'd rather use.
 		Default is just a transparent background.
